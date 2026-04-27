@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Playwrite+DE+SAS:wght@100..400&display=swap');
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+body {
+ font-family: 'Playwrite DE SAS', sans-serif;
+ color: #333;
+position: relative;
+width: 1795px;
+height: 8667px;
+background: linear-gradient(180deg, #96A7C5 0%, #394879 86.54%) !important;
+}
