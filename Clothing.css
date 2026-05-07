@@ -1,0 +1,841 @@
+
+/* Основная плашка меню */
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Playwrite+DE+SAS:wght@100..400&display=swap');
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+/* Основная плашка меню */
+.custom-navbar {
+  background-color: #8da0c1; /* Цвет фона как на картинке */
+  padding: 10px 20px;
+  border-radius: 40px; /* Скругляем края всей панели */
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 20px auto;   /* auto слева и справа сдвинет блок в центр */
+    width: fit-content;
+}
+.social-icon {
+  /* Ограничиваем размер */
+  width: 24px;  /* Ширина иконки */
+  height: 24px; /* Высота иконки */
+  
+  /* Сохраняем пропорции, чтобы иконка не сплющилась */
+  object-fit: contain;
+  
+  /* Делаем небольшой отступ между ними */
+  margin: 0 8px;
+  
+  /* Выравниваем по вертикали относительно текста, если он есть */
+  vertical-align: middle;
+}
+
+/* Контейнер, чтобы они стояли в ряд */
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+.nav-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Стили для кнопок-пузырьков */
+.nav-btn {
+  background: linear-gradient(to bottom, #7d8fb3, #5a6d94); /* Градиент кнопок */
+  border: 2px solid #4a5a7d;
+  border-radius: 30px;
+  padding: 8px 25px;
+  margin: 0 5px;
+  color: #1a2a44;
+  text-decoration: none;
+  font-family: 'Brush Script MT', cursive; /* Рукописный стиль */
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* Группировка элементов */
+.nav-links, .nav-right, .socials {
+  display: flex;
+  align-items: center;
+}
+
+/* Разделитель (пунктирная линия из картинки) */
+.nav-links {
+  border-right: 2px dotted #4a5a7d;
+  padding-right: 15px;
+  margin-right: 15px;
+}
+
+/* Иконки соцсетей (круглые) */
+.social-icon, .profile-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to bottom, #7d8fb3, #5a6d94);
+  border: 2px solid #4a5a7d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #1a2a44;
+}
+
+.nav-logo img {
+  height: 50px;
+  border-radius: 15px;
+}
+/* Основная секция с синеватым фоном */
+.welcome-section {
+  background-color: #8da0c1; /* Общий фон страницы из макета */
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Контейнер для текста и картинки */
+.welcome-container {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Стили текстового блока */
+.welcome-text {
+  flex: 1;
+  background-color: #6b7ea6; /* Более темный синий для блока текста */
+  padding: 40px;
+  border-radius: 30px;
+  border: 2px solid #5a6d94;
+  color: #1a2a44;
+  font-family: 'Brush Script MT', cursive; /* Рукописный шрифт */
+  margin: 20px auto;   /* auto слева и справа сдвинет блок в центр */
+    width: fit-content;
+}
+
+.welcome-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.welcome-text p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+/* Стили блока с картинкой */
+.welcome-image {
+  flex: 1;
+}
+
+.welcome-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Чтобы картинка заполняла блок без искажений */
+  border-radius: 30px;
+  border: 2px solid #5a6d94;
+}
+
+/* Адаптивность: на телефонах блоки встанут друг под друга */
+@media (max-width: 768px) {
+  .welcome-container {
+    flex-direction: column;
+  }
+}
+/* Общий контейнер с синеватым фоном и рваными краями */
+.category-container {
+  background-color: #8da0c1; /* Цвет фона как на картинке */
+  padding: 40px;
+  border-radius: 20px; /* Можно настроить для эффекта "облака" */
+  display: inline-block;
+}
+
+/* Сетка для кнопок */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+  gap: 20px; /* Расстояние между кнопками */
+}
+
+/* Стиль каждой кнопки */
+.category-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  background: linear-gradient(to bottom, #7d8fb3, #5a6d94); /* Градиент */
+  border: 2px solid #4a5a7d; /* Темная рамка */
+  border-radius: 25px; /* Сильное закругление углов */
+  
+  /* Текст */
+  color: #1a2a44; /* Темно-синий цвет текста */
+  text-decoration: none;
+  font-family: 'Brush Script MT', cursive; /* Похожий на картинку шрифт */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  
+  /* Тень для объема */
+  box-shadow: inset 0 2px 5px rgba(255,255,255,0.2), 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+/* Эффект при наведении */
+.category-item:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to bottom, #8da0c1, #6b7ea6);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 900px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+  }
+}
+.anime-button {
+  /* Базовая форма и размеры */
+  display: inline-block;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 50px; /* Сильное закругление */
+  
+  /* Цвета и градиент как на фото */
+  background: linear-gradient(to bottom, #8999bc, #62749a); 
+  border: 2px solid #4a5a7d; /* Темная рамка */
+  
+  /* Настройка текста */
+  color: #1a2a44; /* Темно-синий текст */
+  font-family: 'Brush Script MT', cursive; /* Рукописный шрифт */
+  font-size: 24px;
+  font-weight: bold;
+  
+  /* Эффект объема (внутренняя тень) */
+  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.3), 
+              0 4px 6px rgba(0, 0, 0, 0.2);
+              
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* Эффект при наведении */
+.anime-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.4), 
+              0 6px 10px rgba(0, 0, 0, 0.3);
+}
+/* Общий контейнер секции */
+.products-section {
+  background-color: #8da0c1; /* Цвет фона страницы */
+  padding: 40px;
+  border-radius: 20px;
+  font-family: 'Brush Script MT', cursive; /* Похожий рукописный шрифт */
+}
+
+/* Заголовок категории */
+.category-header {
+  background: linear-gradient(to bottom, #8999bc, #62749a);
+  border: 2px solid #4a5a7d;
+  border-radius: 25px;
+  padding: 10px 40px;
+  display: table;
+  margin: 0 auto 30px auto;
+  color: #1a2a44;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px auto;   /* auto слева и справа сдвинет блок в центр */
+    width: fit-content;
+}
+
+/* Сетка для карточек (2 колонки) */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Стиль самой карточки */
+.product-card {
+  background-color: #7a8eb4; /* Цвет рамки карточки */
+  padding: 20px;
+  border-radius: 30px;
+  border: 2px solid #5a6d94;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Контейнер для картинки внутри карточки */
+.image-box {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 250px;
+  margin-bottom: 15px;
+  border: 2px solid #5a6d94;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Блок с текстом под картинкой */
+.info-box {
+  background: linear-gradient(to bottom, #8999bc, #62749a);
+  border-radius: 20px;
+  padding: 10px 15px;
+  border: 2px solid #4a5a7d;
+  color: #1a2a44;
+}
+
+.info-box p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Адаптация для мобильных (1 колонка) */
+@media (max-width: 700px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.best-sellers-badge {
+    /* Базовая форма */
+    display: inline-block;
+    padding: 10px 35px;
+    border-radius: 25px; /* Закругленные края */
+    
+    /* Цвета и градиент */
+    background: linear-gradient(to bottom, #8999bc, #62749a); 
+    border: 2px solid #4a5a7d; /* Темная рамка */
+    
+    /* Настройка текста */
+    color: #1a2a44; /* Темно-синий текст */
+    font-family: 'Brush Script MT', cursive; /* Рукописный шрифт */
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    
+    /* Эффект объема (внутренняя и внешняя тени) */
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3), 
+                0 3px 6px rgba(0, 0, 0, 0.2);
+    
+    /* Центрирование (если нужно) */
+    margin: 20px auto;
+}
+/* Контейнер всей секции */
+.clothing-section {
+  background-color: #8da0c1; /* Цвет фона страницы */
+  padding: 40px;
+  border-radius: 20px;
+  font-family: 'Brush Script MT', cursive; /* Рукописный стиль */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Кнопка-заголовок "Clothing" */
+.category-badge {
+  background: linear-gradient(to bottom, #8999bc, #62749a);
+  border: 2px solid #4a5a7d;
+  border-radius: 25px;
+  padding: 8px 50px;
+  display: table;
+  margin: 0 auto 30px auto;
+  color: #1a2a44;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.3);
+}
+
+/* Сетка карточек */
+.clothing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+  gap: 25px;
+}
+
+/* Сама карточка товара */
+.item-card {
+  background-color: #7a8eb4; /* Синий фон карточки */
+  padding: 15px;
+  border-radius: 25px;
+  border: 2px solid #5a6d94;
+}
+
+/* Белый фон для картинки */
+.item-image {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 220px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Блок с ценой и названием */
+.item-info {
+  background: linear-gradient(to bottom, #8999bc, #62749a);
+  border-radius: 15px;
+  padding: 10px 15px;
+  border: 2px solid #4a5a7d;
+  color: #1a2a44;
+}
+
+.item-info p {
+  margin: 4px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 600px) {
+  .clothing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  background-color: #8da0c1; /* Цвет фона всей панели */
+}
+
+.tag-button {
+  /* Базовая форма */
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 20px; /* Закругленные края */
+  text-decoration: none;
+  
+  /* Цвета и градиент как на картинке */
+  background: linear-gradient(to bottom, #8999bc, #62749a); 
+  border: 2px solid #4a5a7d; /* Темная рамка */
+  
+  /* Текст */
+  color: #1a2a44; /* Темно-синий цвет шрифта */
+  font-family: 'Brush Script MT', cursive; /* Рукописный шрифт */
+  font-size: 1.1rem;
+  font-weight: bold;
+  
+  /* Эффекты объема */
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3), 
+              0 3px 5px rgba(0, 0, 0, 0.2);
+  
+  transition: all 0.2s ease;
+}
+
+/* Эффект при наведении */
+.tag-button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4), 
+              0 5px 8px rgba(0, 0, 0, 0.3);
+}
+.game-section {
+  background-color: #8da0c1; /* Общий синий фон */
+  padding: 30px;
+  border-radius: 20px;
+  font-family: 'Brush Script MT', cursive; /* Рукописный шрифт */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Стили заголовка-кнопки */
+.category-title {
+  background: linear-gradient(to bottom, #8999bc, #62749a);
+  border: 2px solid #4a5a7d;
+  border-radius: 20px;
+  padding: 5px 30px;
+  display: table;
+  margin: 0 auto 20px auto;
+  color: #1a2a44;
+  font-weight: bold;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);
+}
+
+/* Сетка карточек */
+.products-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Две колонки */
+  gap: 20px;
+}
+
+/* Основная карточка */
+.card {
+  background-color: #7a8eb4; /* Цвет рамки карточки */
+  padding: 15px;
+  border-radius: 25px;
+  border: 1px solid #5a6d94;
+}
+
+/* Место под картинку */
+.img-wrapper {
+  background-color: #000; /* Фон для картинок (или белый) */
+  border-radius: 20px;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Плашка с текстом внизу карточки */
+.label {
+  background: linear-gradient(to bottom, #8999bc, #62749a);
+  border: 1px solid #4a5a7d;
+  border-radius: 15px;
+  padding: 10px;
+  color: #1a2a44;
+}
+
+.label p {
+  margin: 2px 0;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+.game-section {
+  background-color: #8da0c1; /* Общий синий фон */
+  padding: 30px;
+  border-radius: 20px;
+  font-family: 'Brush Script MT', cursive; /* Рукописный шрифт */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Стили заголовка-кнопки */
+.category-title {
+  background: linear-gradient(to bottom, #8999bc, #62749a);
+  border: 2px solid #4a5a7d;
+  border-radius: 20px;
+  padding: 5px 30px;
+  display: table;
+  margin: 0 auto 20px auto;
+  color: #1a2a44;
+  font-weight: bold;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);
+
+}
+
+/* Сетка карточек */
+.products-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Две колонки */
+  gap: 20px;
+}
+
+/* Основная карточка */
+.card {
+  background-color: #7a8eb4; /* Цвет рамки карточки */
+  padding: 15px;
+  border-radius: 25px;
+  border: 1px solid #5a6d94;
+}
+
+/* Место под картинку */
+.img-wrapper {
+  background-color: #000; /* Фон для картинок (или белый) */
+  border-radius: 20px;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Плашка с текстом внизу карточки */
+.label {
+  background: linear-gradient(to bottom, #8999bc, #62749a);
+  border: 1px solid #4a5a7d;
+  border-radius: 15px;
+  padding: 10px;
+  color: #1a2a44;
+}
+
+.label p {
+  margin: 2px 0;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+.footer-blue-flame {
+    background-color: #8da0c1; /* Основной синий фон */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Brush Script MT', cursive; /* Рукописный шрифт */
+}
+
+.footer-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Карточка контактов слева */
+.footer-contacts-card {
+    background-color: #7a8eb4;
+    border: 2px solid #5a6d94;
+    border-radius: 30px;
+    padding: 20px;
+    flex: 1;
+    position: relative;
+}
+
+.contact-header {
+    background: linear-gradient(to bottom, #8999bc, #62749a);
+    border: 2px solid #4a5a7d;
+    border-radius: 20px;
+    padding: 5px 25px;
+    width: fit-content;
+    margin: -35px auto 15px auto; /* Поднимаем заголовок на рамку */
+    color: #1a2a44;
+    font-weight: bold;
+}
+
+.contacts-inner {
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.contact-bubble {
+    background: linear-gradient(to bottom, #8999bc, #62749a);
+    border: 2px solid #4a5a7d;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    color: #1a2a44;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);
+}
+
+.social-icons-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.icon-btn {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(to bottom, #8999bc, #62749a);
+    border: 2px solid #4a5a7d;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #1a2a44;
+    font-weight: bold;
+}
+
+/* Брендинг справа */
+.footer-branding {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.brand-text {
+    font-size: 4rem;
+    line-height: 0.9;
+    color: #1a2a44;
+    text-align: left;
+}
+
+.brand-logo img {
+    height: 120px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column-reverse;
+    }
+}
+:root {
+    --bg-color: #7a8dbb;
+    --card-bg: #9eb1d9;
+    --inner-card: #b8c8e8;
+    --text-color: #1a2a4a;
+    --accent-border: #5a6d9b;
+}
+body {
+    background: linear-gradient(180deg, #96A7C5 0%, #394879 86.54%) !important;
+    color: #333;
+    font-family: 'Playwrite DE SAS', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: var(--bg-color);
+    border: 3px solid var(--accent-border);
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Header & Nav */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background: var(--inner-card);
+    border: 2px solid var(--accent-border);
+    border-radius: 15px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    gap: 15px;
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-text { flex: 1; font-size: 1.1rem; }
+.hero-img { 
+    width: 150px; 
+    height: 150px; 
+    background: #fff; 
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Categories */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/* Product Sections */
+.section-box {
+    background: var(--card-bg);
+    border-radius: 25px;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 2px solid var(--accent-border);
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: -25px;
+    background: var(--inner-card);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 20px;
+    border-radius: 15px;
+    border: 2px solid var(--accent-border);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.product-card {
+    background: var(--inner-card);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.product-card img {
+    width: 100%;
+    height: 120px;
+    border-radius: 15px;
+    background: #eee;
+    margin-bottom: 8px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    background: var(--inner-card);
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--accent-border);
+}
+
+.brand-name {
+    font-size: 2.5rem;
+    text-align: right;
+    line-height: 1;
+}
+
+.brand-name span { display: block; font-size: 1.2rem; font-style: italic; }
