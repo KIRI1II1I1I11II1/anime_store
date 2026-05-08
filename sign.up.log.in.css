@@ -1,3 +1,105 @@
+/* Основной фон и центрирование */
+.auth-wrapper {
+    background-color: #8fa3c5; /* Цвет фона как на картинке */
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-family: 'Comic Sans MS', cursive; /* Рукописный шрифт */
+}
+
+.auth-form {
+    background-color: #8fa3c5;
+    padding: 40px;
+    border-radius: 30px;
+    border: 2px solid #7d8fb3;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Строка ввода */
+.input-row {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+
+/* Рамки для ваших картинок */
+.icon-square, .social-btn {
+    width: 55px;
+    height: 55px;
+    background: #8fa3c5;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Внутренняя тень создает эффект вдавленности */
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2), 
+                inset -3px -3px 6px rgba(255,255,255,0.3);
+}
+
+.user-img {
+    width: 28px; /* Регулируйте размер вашей картинки здесь */
+    height: 28px;
+    object-fit: contain;
+}
+
+/* Поля ввода (вдавленные) */
+.field-container {
+    flex-grow: 1;
+}
+
+.field-container input {
+    width: 100%;
+    height: 55px;
+    background: #8fa3c5;
+    border: none;
+    border-radius: 28px;
+    padding: 0 25px;
+    font-size: 20px;
+    font-style: italic;
+    color: #2c3e50;
+    outline: none;
+    box-shadow: inset 4px 4px 8px rgba(0,0,0,0.2), 
+                inset -4px -4px 8px rgba(255,255,255,0.3);
+}
+
+/* Кнопка Sign Up (выпуклая) */
+.btn-signup {
+    background: #8fa3c5;
+    border: 1px solid #7d8fb3;
+    padding: 12px 50px;
+    border-radius: 20px;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2), 
+                -4px -4px 8px rgba(255,255,255,0.3);
+    transition: transform 0.1s;
+}
+
+.btn-signup:active {
+    transform: scale(0.98);
+}
+
+.login-link {
+    font-style: italic;
+    color: #1a2a44;
+    font-size: 18px;
+}
+
+/* Панель для иконок соцсетей */
+.social-panel {
+    display: flex;
+    gap: 25px;
+    padding: 15px 35px;
+    border: 1px solid #7d8fb3;
+    border-radius: 20px;
+}
 :root {
   --bg-color: #7a8eb6;
   --panel-bg: rgba(255, 255, 255, 0.1);
